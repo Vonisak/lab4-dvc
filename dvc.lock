@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  dtree:
+    cmd: python d-tree.py
+    deps:
+    - path: d-tree.py
+      md5: 2b9a0e935a7b7510fa08ca66791a6e1d
+      size: 887
+    - path: iris.csv
+      md5: dfec4ccf223324d14497a8970f185eae
+      size: 4569
+    outs:
+    - path: predict.csv
+      md5: dd86012ca3b2d870ac8c5cecff34d66e
+      size: 768

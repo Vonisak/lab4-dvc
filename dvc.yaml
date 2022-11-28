@@ -1,0 +1,12 @@
+stages:
+  dtree:
+    cmd: python d-tree.py
+    deps:
+    - d-tree.py
+    - iris.csv
+    plots:
+    - predict.csv:
+        cache: false
+        template: confusion
+        x: predicted
+        y: actual
