@@ -1,0 +1,17 @@
+stages:
+  k-means:
+    cmd: python k-means.py
+    deps:
+    - iris.csv
+    - k-means.py
+    plots:
+    - predict.csv:
+        cache: false
+        template: confusion
+        x: predicted
+        y: actual
+  metrics:
+    cmd: python metrics.py
+    deps:
+    - metrics.py
+    - predict.csv

@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  k-means:
+    cmd: python k-means.py
+    deps:
+    - path: iris.csv
+      md5: dfec4ccf223324d14497a8970f185eae
+      size: 4569
+    - path: k-means.py
+      md5: 22b630c334eda9ef709b478725986651
+      size: 594
+    outs:
+    - path: predict.csv
+      md5: 79723e7df0c14b5c873abc45f31a208a
+      size: 768
+  metrics:
+    cmd: python metrics.py
+    deps:
+    - path: metrics.py
+      md5: 0ab6cd1192239583e13ae1d3cd114343
+      size: 185
+    - path: predict.csv
+      md5: 79723e7df0c14b5c873abc45f31a208a
+      size: 768
